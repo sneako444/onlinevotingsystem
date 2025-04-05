@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    environment {
+        GIT_REPO = 'https://github.com/sneako444/flaskapp' // Replace with your GitHub repository URL
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning repository...'
+                git branch: 'main', url: "${GIT_REPO}" // Replace 'main' with your branch name if different
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Add your build commands here
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Add your test commands here
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Add your deployment commands here
+            }
+        }
+    }
+}
