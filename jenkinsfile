@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO = 'https://github.com/sneako444/flaskapp' // Replace with your GitHub repository URL
+        GIT_REPO = 'https://github.com/sneako444/flaskapp' branch: 'master' // Replace with your GitHub repository URL
     }
 
     stages {
